@@ -1,12 +1,11 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Ruta inicial requerida por la prueba
 app.get('/', (req, res) => {
-  res.send('¡Hola CI/CD! Primera versión desplegada desde GitHub');
+  res.send('¡Hola desde mi aplicación CI/CD!');
 });
 
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });
